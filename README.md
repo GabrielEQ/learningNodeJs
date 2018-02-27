@@ -13,8 +13,8 @@
 
 3. Open your browser and Access: 
 
-• http://localhost:3000
-• http://localhost:3000/noticia
-• http://localhost:3000/noticias
-• http://localhost:3000/form_add_noticia
+> * (http://localhost:3000)
+> * (http://localhost:3000/noticia)
+> * (http://localhost:3000/noticias)
+> * (http://localhost:3000/form_inclusao_noticia)
 
