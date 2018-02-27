@@ -16,5 +16,5 @@
 > * (http://localhost:3000)
 > * (http://localhost:3000/noticia)
 > * (http://localhost:3000/noticias)
-> * (http://localhost:3000/form_inclusao_noticia)
+> * (http://localhost:3000/formulario_inclusao_noticia)
 
