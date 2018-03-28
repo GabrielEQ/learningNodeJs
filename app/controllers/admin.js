@@ -1,36 +1,22 @@
-module.exports.formulario_inclusao_noticia = function(application, req, res) {
-  res.render('admin/form_add_noticia', {validacao: {}, noticia: {}});
+module.exports.addCliente = function(application, req, res) {
+  res.render('admin/add-cliente'/*, {validacao: {}, cliente: {}}*/);
 }
 
-module.exports.noticias_salvar = function(application, req, res){
-  var noticia = req.body;
+module.exports.clienteSalvar = function(application, req, res){
+  var cliente = req.body;
 
-  req.assert('titulo', 'Título é obrigatório')
-     .notEmpty();
-  req.assert('resumo', 'Resumo é obrigatório')
-     .notEmpty();
-  req.assert('resumo', 'Resumo deve conter de 10 e 100 caracteres')
-     .len(10,100);
-  req.assert('autor',   'Autor é obrigatório')
-     .notEmpty();
-  req.assert('data_noticia', 'Data é obigatória')
-     .notEmpty()
-     .isDate({format: 'YYYY-MM-DD'});
-  req.assert('noticia', 'Notícia é obrigatório')
-     .notEmpty();
+  // var erros = req.validationErrors();
 
-  var erros = req.validationErrors();
-
-  if(erros){
-    res.render('admin/form_add_noticia', {validacao: erros, noticia : noticia});
-    return;
-  }
+  // if(erros){
+  //   res.render('admin/form_add_noticia', {validacao: erros, noticia : noticia});
+  //   return;
+  // }
 
   var connection = application.config.dbConnection();
-  var noticiasModel = new application.app.models.NoticiasDAO(connection);
+  var clientesModel = new application.app.models.ClientesDAO(connection);
 
   //save e reditrect to news
-  noticiasModel.salvarNoticia(noticia, function(error, result){
-      res.redirect('/noticias');
+  clientesModel.salvarCliente(cliente, function(error, result){
+      res.redirect('/clientes');
   });
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Cliente</title>
+		</head>
+	<body>
+
+		<h1>Cliente</h1>
+
+		<table>
+			<thead>
+				<td>ID</td>
+				<td>Nome Fantasia</td>
+				<td>CNPJ</td>
+				<td>Razão social</td>
+			</thead>
+				<tr>
+					<td><%= resultCliente[0].id_cliente %></td>
+					<td><%= resultCliente[0].nome_fantasia %></td>
+					<td><%= resultCliente[0].cnpj %></td>
+					<td><%= resultCliente[0].razao_social %></td>
+					<td><%= resultCliente[0].inscricao_estadual %></td>
+					<td><%= resultCliente[0].cep %></td>
+					<td><%= resultCliente[0].endereco %></td>
+					<td><%= resultCliente[0].nome_comprador %></td>
+					<td><%= resultCliente[0].email %></td>
+					<td><%= resultCliente[0].telefone_fixo %></td>
+					<td><%= resultCliente[0].whatsapp %></td>
+					<td><%= resultCliente[0].email_xml %></td>
+					<td><%= resultCliente[0].prazo_pagamento %></td>
+					<td><%= resultCliente[0].valor_caixa %></td>
+					<td><%= resultCliente[0].observacao %></td>
+				</tr>
+		</table>
+
+	</body>
+</html>
